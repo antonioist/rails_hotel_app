@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Obliterating starlight hotel"
 
+Room.destroy_all
+RoomCategory.destroy_all
 Hotel.destroy_all
 User.destroy_all
 
 puts "everything was destroyed succesfully"
 
-puts "creating amazing hotels"
+puts "creating amazing hotels..."
 
 apolo = Hotel.create!(
   name: "Apolo",
@@ -45,6 +47,62 @@ carmen = Hotel.create!(
 )
 
 puts "hotels done"
+
+puts "creating room categories..."
+
+vip = RoomCategory.create!(
+  category: "VIP",
+  momento: 5000,
+  noche: 10000,
+  hora_extra: 1000,
+  hotel: apolo
+)
+
+single = RoomCategory.create!(
+  category: "SINGLE",
+  momento: 3000,
+  noche: 70000,
+  hora_extra: 500,
+  hotel: apolo
+)
+
+double = RoomCategory.create!(
+  category: "DOUBLE",
+  momento: 4000,
+  noche: 90000,
+  hora_extra: 900,
+  hotel: apolo
+)
+
+puts "room categories done"
+
+puts "creating rooms..."
+
+vip1 = Room.create!(
+  number: 1,
+  room_category: vip,
+  hotel: apolo
+)
+
+vip2 = Room.create!(
+  number: 2,
+  room_category: vip,
+  hotel: apolo
+)
+
+vip3 = Room.create!(
+  number: 3,
+  room_category: vip,
+  hotel: apolo
+)
+
+single1 = Room.create!(
+  number: 4,
+  room_category: single,
+  hotel: jardin
+)
+
+puts "rooms done"
 
 puts "Creating users..."
 
