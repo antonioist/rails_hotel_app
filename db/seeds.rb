@@ -8,6 +8,7 @@
 puts "Obliterating starlight hotel"
 
 Hotel.destroy_all
+User.destroy_all
 
 puts "everything was destroyed succesfully"
 
@@ -44,3 +45,12 @@ carmen = Hotel.create!(
 )
 
 puts "hotels done"
+
+puts "Creating users..."
+
+antonio = User.create!(
+  email: "antonio@powermouse.co",
+  password: "123123",
+  admin_role: true
+)
+puts "Users created!"

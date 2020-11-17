@@ -46,6 +46,8 @@ gem 'simple_form'
 
 # Gems added by Antonio
 gem 'cloudinary', '~> 1.16.0'
+gem 'rails_admin', '~> 2.0'
+gem 'cancancan'
 
 
 group :development, :test do  gem 'pry-byebug'
