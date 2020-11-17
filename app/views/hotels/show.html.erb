@@ -2,5 +2,5 @@
 <% @room_categories.each do |room_category| %>
   <p><%= room_category.category %></p>
   <p><%= room_category.momento %></p>
-  <%= link_to "here", hotel_rooms_path(room_category)  %>
+  <%= link_to "here", hotel_rooms_path(@hotel)  %>
 <% end %>
