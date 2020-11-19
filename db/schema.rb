@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_083113) do
+ActiveRecord::Schema.define(version: 2020_11_18_074308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,33 @@ ActiveRecord::Schema.define(version: 2020_11_17_083113) do
     t.bigint "room_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "fee_id"
+    t.time "time_start"
+    t.time "time_end"
+    t.index ["fee_id"], name: "index_bookings_on_fee_id"
     t.index ["room_category_id"], name: "index_bookings_on_room_category_id"
     t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["worker_id"], name: "index_bookings_on_worker_id"
+  end
+
+  create_table "fees", force: :cascade do |t|
+    t.integer "amount"
+    t.boolean "is_holyday"
+    t.bigint "room_category_id"
+    t.bigint "time_block_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_category_id"], name: "index_fees_on_room_category_id"
+    t.index ["time_block_id"], name: "index_fees_on_time_block_id"
+  end
+
+  create_table "holydays", force: :cascade do |t|
+    t.string "name"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "hotels", force: :cascade do |t|
@@ -57,6 +81,12 @@ ActiveRecord::Schema.define(version: 2020_11_17_083113) do
     t.index ["room_category_id"], name: "index_rooms_on_room_category_id"
   end
 
+  create_table "time_blocks", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -68,6 +98,8 @@ ActiveRecord::Schema.define(version: 2020_11_17_083113) do
     t.boolean "admin_role", default: false
     t.boolean "supervisor_role", default: false
     t.boolean "user_role", default: true
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -81,9 +113,13 @@ ActiveRecord::Schema.define(version: 2020_11_17_083113) do
     t.index ["hotel_id"], name: "index_workers_on_hotel_id"
   end
 
+  add_foreign_key "bookings", "fees"
   add_foreign_key "bookings", "room_categories"
   add_foreign_key "bookings", "rooms"
+  add_foreign_key "bookings", "users"
   add_foreign_key "bookings", "workers"
+  add_foreign_key "fees", "room_categories"
+  add_foreign_key "fees", "time_blocks"
   add_foreign_key "room_categories", "hotels"
   add_foreign_key "rooms", "hotels"
   add_foreign_key "rooms", "room_categories"
