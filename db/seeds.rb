@@ -79,25 +79,25 @@ puts "room categories done"
 puts "creating rooms..."
 
 vip1 = Room.create!(
-  number: 1,
+  number: 101,
   room_category: vip,
   hotel: apolo
 )
 
 vip2 = Room.create!(
-  number: 2,
+  number: 201,
   room_category: vip,
   hotel: apolo
 )
 
 vip3 = Room.create!(
-  number: 3,
+  number: 301,
   room_category: vip,
   hotel: apolo
 )
 
 single1 = Room.create!(
-  number: 4,
+  number: 401,
   room_category: single,
   hotel: jardin
 )
@@ -111,4 +111,11 @@ antonio = User.create!(
   password: "123123",
   admin_role: true
 )
+
+User.create!(
+  email: "pselman@powermouse.co",
+  password: "123456",
+  admin_role: true
+)
+
 puts "Users created!"

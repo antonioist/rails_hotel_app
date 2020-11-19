@@ -20,5 +20,16 @@ module RailsHotelApp
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # config/initializers/locale.rb
+    # Where the I18n library should search for translation files
+    config.i18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+    
+    # Permitted locales available for the application
+    config.i18n.available_locales = [:en, :es]
+
+    # Set default locale to something other than :en
+    config.i18n.default_locale = :es
   end
 end
+

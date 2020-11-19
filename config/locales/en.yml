@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  password: "Password"
+
+  activerecord:
+    models:
+      user: "User"
