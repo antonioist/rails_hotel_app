@@ -1,0 +1,27 @@
+es:
+  hello: "hola mundo"
+  password: "Contraseña"
+
+  activerecord:
+    models:
+      user: Usuarios
+      room: Piezas
+      room_category: Categorias de Piezas
+      booking: Reservas
+      hotel: Hoteles
+      worker: Trabajadores
+    attributes:
+      attribute_commons: &commons
+        name: Nombre
+        description: Descripción
+        number: Número
+        category: Categoría
+      hotel:
+        <<: *commons
+        address: Dirección
+        phone_number: Teléfono
+      room:
+        <<: *commons
+      user:
+        first_name: Nombre
+        last_name: Apellido

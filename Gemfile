@@ -49,6 +49,10 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 
+# Gems added by Pablo
+gem 'i18n'
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+gem 'devise-i18n'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

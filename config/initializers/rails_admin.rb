@@ -1,5 +1,6 @@
+require 'i18n'
+I18n.default_locale = :es
 RailsAdmin.config do |config|
-
   ### Popular gems integration
 
   ## == Devise ==
