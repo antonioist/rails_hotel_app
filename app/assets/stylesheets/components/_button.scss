@@ -1,0 +1,14 @@
+.button {
+  background-color: $golden;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  border-radius: 32px;
+    &:hover {
+      text-decoration: none;
+      background-color: $goldenhover;
+      color: white;
+    }
+}
