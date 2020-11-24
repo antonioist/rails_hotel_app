@@ -109,6 +109,24 @@ puts "Creating users..."
 antonio = User.create!(
   email: "antonio@powermouse.co",
   password: "123123",
+  first_name: "Antonio",
+  last_name: "Sanchez",
   admin_role: true
+)
+
+juanita = User.create!(
+  email: "juanita@powermouse.co",
+  password: "123123",
+  first_name: "Juanita",
+  last_name: "Elgato",
+  supervisor_role: true
+)
+
+pablita = User.create!(
+  email: "pablita@powermouse.co",
+  password: "123123",
+  first_name: "Pablita",
+  last_name: "Elhamster",
+  user_role: true
 )
 puts "Users created!"
