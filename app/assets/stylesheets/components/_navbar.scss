@@ -55,10 +55,28 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .navbar-lewagon .navbar-brand img {
+    width: 56px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 16px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+  .navbar-lewagon .navbar-brand img {
+    width: 56px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 16px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
 }
