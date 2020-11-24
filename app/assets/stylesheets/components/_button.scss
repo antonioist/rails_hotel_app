@@ -1,5 +1,5 @@
 .button {
-  background-color: $golden;
+  background-color: $blue;
   padding: 10px;
   text-decoration: none;
   text-align: center;
@@ -8,7 +8,7 @@
   border-radius: 32px;
     &:hover {
       text-decoration: none;
-      background-color: $goldenhover;
+      background-color: $bluehover;
       color: white;
     }
 }
