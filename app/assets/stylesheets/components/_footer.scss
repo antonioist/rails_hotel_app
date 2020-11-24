@@ -57,3 +57,84 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .footer-powered {
+    font-size: 32px;
+  }
+  .footer-p-email {
+    font-size: 32px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .footer-lins a {
+    font-size: 56px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .footer-powered {
+    font-size: 32px;
+  }
+  .footer-p-email {
+    font-size: 32px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .footer-links a {
+    font-size: 56px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .footer-powered {
+    font-size: 16px;
+  }
+  .footer-p-email {
+    font-size: 16px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .footer-links a {
+    font-size: 16px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .footer-powered {
+    font-size: 16px;
+  }
+  .footer-p-email {
+    font-size: 16px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .footer-links a {
+    font-size: 16px;
+  }
+}
