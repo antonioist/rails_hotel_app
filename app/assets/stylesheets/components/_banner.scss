@@ -63,22 +63,40 @@ tbody tr:nth-child(even) {
   .title-banner {
     font-size: 36px;
   }
-  .banner-frase {
-    font-size: 30px;
+  .banner .banner-frase {
+    font-size: 32px;
+    text-align: center;
+  }
+  .banner .button {
+    font-size: 32px;
   }
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .title-banner {
+  .banner .title-banner {
     font-size: 56px;
+  }
+  .banner .banner-frase {
+    font-size: 32px;
+    text-align: center;
+  }
+  .banner .button {
+    font-size: 32px;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .title-banner {
+  .banner .title-banner {
     font-size: 56px;
+  }
+  .banner .banner-frase {
+    font-size: 32px;
+    text-align: center;
+  }
+  .banner .button {
+    font-size: 32px;
   }
 }
 
@@ -89,10 +107,28 @@ tbody tr:nth-child(even) {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .banner .title-banner {
+    font-size: 32px;
+  }
+  .banner .banner-frase {
+    font-size: 16px;
+    // text-align: center;
+  }
+  .banner .button {
+    font-size: 16px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+  .banner .title-banner {
+    font-size: 32px;
+  }
+  .banner .banner-frase {
+    font-size: 16px;
+    // text-align: center;
+  }
+  .banner .button {
+    font-size: 16px;
+  }
 }
