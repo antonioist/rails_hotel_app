@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 10vh;
+  .navbar-frase {
+    margin: 0;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +12,83 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 56px;
+}
+
+.navbar-powermouse {
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar-lewagon .navbar-brand img {
+    width: 120px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 32px;
+  }
+  .nav-link {
+    font-size: 32px;
+  }
+  .nav-item .avatar {
+    width: 100px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .navbar-lewagon .navbar-brand img {
+    width: 120px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 32px;
+  }
+  .nav-link {
+    font-size: 32px;
+  }
+  .nav-item .avatar {
+    width: 100px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .navbar-lewagon .navbar-brand img {
+    width: 56px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 16px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .nav-item .avatar {
+    width: 40px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .navbar-lewagon .navbar-brand img {
+    width: 56px;
+  }
+  .navbar-frase {
+    margin: 0;
+    font-size: 16px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .nav-item .avatar {
+    width: 40px;
+  }
 }

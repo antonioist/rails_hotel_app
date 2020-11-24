@@ -1,0 +1,140 @@
+.footer {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  // padding: 0px 50px;
+  color: rgba(0,0,0,0);
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+  }
+  .footer-section2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgb(214, 214, 214);
+    border-left: 1px solid black;
+  }
+  .footer-copyright {
+    .footer-powered {
+      margin: 0;
+      color: black;
+    }
+    .footer-powermouse {
+      font-family: 'Black Ops One', cursive;
+      text-transform: uppercase;
+    }
+  }
+  .footer-email {
+    .footer-p-email {
+      margin: 0;
+      color: black;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .footer-powered {
+    font-size: 32px;
+  }
+  .footer-p-email {
+    font-size: 32px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .footer-lins a {
+    font-size: 56px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .footer-powered {
+    font-size: 32px;
+  }
+  .footer-p-email {
+    font-size: 32px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .footer-links a {
+    font-size: 56px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .footer-powered {
+    font-size: 16px;
+  }
+  .footer-p-email {
+    font-size: 16px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .footer-links a {
+    font-size: 16px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .footer-powered {
+    font-size: 16px;
+  }
+  .footer-p-email {
+    font-size: 16px;
+  }
+  .footer-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .footer-links a {
+    font-size: 16px;
+  }
+}
